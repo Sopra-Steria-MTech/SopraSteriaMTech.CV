@@ -1,0 +1,18 @@
+<div class="profile-pic float-right">
+    <div *ngIf="foto != null">
+
+        <img class="img-profile rounded-circle img-fluid mr-2" src="data:image/png;base64,{{foto}}" alt="Foto" />
+    </div>
+
+    <div *ngIf="status != null">
+        <br /><br />
+        {{status}}
+    </div>
+
+    <label class="btn">
+        <span class="edit fas fa-edit fa-lg"></span>
+        <span class="d-none">
+            <input type="file"/>
+        </span>
+    </label>
+</div>

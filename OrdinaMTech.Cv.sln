@@ -16,6 +16,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrdinaMTech.Cv.BlazorApp", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrdinaMTech.Cv.Data", "OrdinaMTech.CV.Data\OrdinaMTech.Cv.Data.csproj", "{9B785519-037B-4450-952B-F80190AA6527}"
 EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "OrdinaMTech.Cv.Angular", "OrdinaMTech.Cv.Angular\OrdinaMTech.Cv.Angular.esproj", "{26754B65-C5EE-4600-BB16-373598E74D71}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,12 @@ Global
 		{9B785519-037B-4450-952B-F80190AA6527}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B785519-037B-4450-952B-F80190AA6527}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B785519-037B-4450-952B-F80190AA6527}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26754B65-C5EE-4600-BB16-373598E74D71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26754B65-C5EE-4600-BB16-373598E74D71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26754B65-C5EE-4600-BB16-373598E74D71}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{26754B65-C5EE-4600-BB16-373598E74D71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26754B65-C5EE-4600-BB16-373598E74D71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26754B65-C5EE-4600-BB16-373598E74D71}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
