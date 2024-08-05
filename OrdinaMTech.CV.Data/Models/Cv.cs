@@ -1,8 +1,13 @@
-﻿namespace OrdinaMTech.Cv.Data.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace OrdinaMTech.Cv.Data.Models
 {
     public class Cv
     {
         public int Id { get; set; }
+
+        [ForeignKey("Personalia")]
+        public int PersonaliaId { get; set; }
 
         public virtual Personalia? Personalia { get; set; }
 

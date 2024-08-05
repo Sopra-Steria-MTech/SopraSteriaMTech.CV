@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OrdinaMTech.Cv.Data.Models
 {
@@ -11,5 +12,8 @@ namespace OrdinaMTech.Cv.Data.Models
         public DateTime DatumVan { get; set; }
         public DateTime? DatumTm { get; set; }
         public bool Diploma { get; set; }
+
+        [ForeignKey("Cv")]
+        public int CvId { get; set; }
     }
 }

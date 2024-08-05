@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OrdinaMTech.Cv.Data.Models
 {
@@ -13,5 +14,8 @@ namespace OrdinaMTech.Cv.Data.Models
         public string? Project { get; set; }
         [Required]
         public string? Beschrijving { get; set; }
+
+        [ForeignKey("Cv")]
+        public int CvId { get; set; }
     }
 }

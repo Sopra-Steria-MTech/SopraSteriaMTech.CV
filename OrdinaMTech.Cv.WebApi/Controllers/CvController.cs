@@ -1,9 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using OrdinaMTech.Cv.Data;
 using OrdinaMTech.Cv.Data.Enums;
 using OrdinaMTech.Cv.Data.Models;
 using OrdinaMTech.Cv.WebApi.Filters;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Processing;
 
 namespace OrdinaMTech.Cv.Api.Controllers
 {
@@ -26,20 +29,21 @@ namespace OrdinaMTech.Cv.Api.Controllers
         /// <param name="file">De nieuwe foto</param>
         [HttpPost]
         [Route("personalia/foto/upload")]
-        public IActionResult Upload([FromForm] IFormFile file)
+        public IActionResult Upload([FromForm] FileUploadModel fileModel)
         {
             var maxSize = 1024 * 2000;
-            if (file.Length > maxSize)
+            if (fileModel.File.Length > maxSize)
             {
                 return new UnprocessableEntityObjectResult("Bestand mag niet groter zijn dan " + maxSize / 1024 + "kB");
             }
 
             try
             {
-                using var fileStream = file.OpenReadStream();
+                using var fileStream = fileModel.File.OpenReadStream();
                 using var image = Image.Load(fileStream);
                 var output = new MemoryStream();
-                image.Mutate(c => c.Resize(300, 300));
+
+                image.Mutate(o => o.Resize(new Size(300, 300)));
                 image.SaveAsBmp(output);
 
                 var cv = _cvContext.Cvs.First();
@@ -64,6 +68,9 @@ namespace OrdinaMTech.Cv.Api.Controllers
         public IActionResult Get()
         {
             var result = _cvContext.Cvs.FirstOrDefault();
+            if (result == null)
+                return NotFound();
+
             return Ok(result);
         }
 
@@ -71,13 +78,21 @@ namespace OrdinaMTech.Cv.Api.Controllers
         /// Reset het CV naar de defaults
         /// </summary>
         [HttpPut]
-        public IActionResult Put()
+        public IActionResult Reset()
         {
             var cv = _cvContext.Cvs.FirstOrDefault();
-            if (cv == null)
+            if (cv != null)
             {
-                cv = new Data.Models.Cv();
+                var cvs = _cvContext.Cvs
+                    .Include(c => c.Kennis)
+                    .Include(c => c.Cursussen)
+                    .Include(c => c.Personalia)
+                    .Include(c => c.Talen)
+                    .Include(c => c.Werkervaring)
+                    .Include(c => c.Opleidingen);
+                _cvContext.RemoveRange(cvs);
             }
+            cv = new Data.Models.Cv();
 
             cv.Personalia = new Personalia()
             {
