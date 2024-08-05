@@ -32,7 +32,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: node-app
-          path: './OrdinaMTech.Cv.Angular/dist/CVAngular'
+          path: './OrdinaMTech.Cv.Angular/dist/ordina-mtech.cv.angular'
 
   deploy:
     runs-on: ubuntu-latest
