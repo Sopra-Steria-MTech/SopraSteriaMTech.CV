@@ -9,8 +9,8 @@
                 <div>Diploma: {{opleiding.diploma ? "Ja" : "Nee"}}</div>
             </div>
             <div class="resume-date text-md-right">
-                <span class="text-primary">{{opleiding.datumVan}} - {{opleiding.datumTm != null ?
-                    opleiding.datumTm : "heden"}}</span>
+                <span class="text-primary">{{DateToShort(opleiding.datumVan)}} - {{opleiding.datumTm != null ?
+                    DateToShort(opleiding.datumTm) : "heden"}}</span>
             </div>
         </div>
 

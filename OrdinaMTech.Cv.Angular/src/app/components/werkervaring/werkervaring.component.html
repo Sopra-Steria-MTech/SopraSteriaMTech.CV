@@ -10,8 +10,8 @@
                 <p>{{ervaring.beschrijving}}</p>
             </div>
             <div class="resume-date text-md-right">
-                <span class="text-primary">{{ervaring.datumVan}} - {{ervaring.datumTm != null ?
-                    ervaring.datumTm : "heden"}}</span>
+                <span class="text-primary">{{DateToShort(ervaring.datumVan)}} - {{ervaring.datumTm != null ?
+                    DateToShort(ervaring.datumTm) : "heden"}}</span>
             </div>
         </div>
 

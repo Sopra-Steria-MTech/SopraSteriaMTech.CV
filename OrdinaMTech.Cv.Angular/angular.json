@@ -42,10 +42,6 @@
               "src/assets/css/custom.css"
             ],
             "scripts": [
-              "src/assets/vendor/jquery-easing/jquery.easing.min.js",
-              "src/assets/vendor/bootstrap/js/bootstrap.bundle.min.js",
-              "src/assets/vendor/jquery/jquery.min.js",
-              "src/assets/js/resume.js"
             ]
           },
           "configurations": {

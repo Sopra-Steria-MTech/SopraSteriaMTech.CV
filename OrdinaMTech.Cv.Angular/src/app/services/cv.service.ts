@@ -13,4 +13,12 @@ export class CvService {
   public GetCv() : Observable<Cv>{
     return this.httpClient.get<Cv>("http://localhost:5000/cv");
   }
+
+  public UploadFile(file:File) : Observable<string>{
+    const formData = new FormData();
+
+    formData.append("file", file);
+
+    return this.httpClient.post<string>("http://localhost:5000/cv/personalia/foto/upload", formData);
+  }
 }

@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Cursus } from '../../../models/cursus.model';
+import { DateToShort } from '../../../shared-functions/date.functions'
 
 @Component({
   selector: 'app-cursussen',
@@ -9,4 +10,8 @@ import { Cursus } from '../../../models/cursus.model';
 export class CursussenComponent {
   @Input()
   cursussen: Cursus[] = []
+
+  DateToShort(date: string) {
+    return DateToShort(date);
+  }
 }

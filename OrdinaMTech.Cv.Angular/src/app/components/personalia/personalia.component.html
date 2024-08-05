@@ -3,7 +3,7 @@
         <app-upload-image [foto]="personalia.foto" />
         <h1 class="mb-0">{{personalia.naam}}</h1>
         <div class="subheading mb-5">
-            Geboortedatum: {{personalia.geboortedatum}}
+            Geboortedatum: {{DateToLong(personalia.geboortedatum)}}
             <br />
             Woonplaats: {{personalia.woonplaats}}
         </div>
