@@ -4,7 +4,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using OrdinaMTech.Cv.BlazorApp.Data;
-using System;
 
 namespace OrdinaMTech.Cv.BlazorApp
 {
@@ -23,10 +22,11 @@ namespace OrdinaMTech.Cv.BlazorApp
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
+            services.AddServiceDiscovery();
             services.AddHttpClient<ApiService>(client =>
             {
-                client.BaseAddress = Configuration.GetValue<Uri>("WebApiUrl");
-            });
+                client.BaseAddress = new("http://api");
+            }).AddServiceDiscovery();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

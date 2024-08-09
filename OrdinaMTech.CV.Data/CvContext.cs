@@ -18,7 +18,34 @@ namespace OrdinaMTech.Cv.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Models.Cv>().ToTable("Cv");
+            modelBuilder.Entity<Models.Cv>().ToTable("Cv")
+                .Navigation(p => p.Personalia)
+                .AutoInclude();
+
+            modelBuilder.Entity<Models.Cv>().ToTable("Cv")
+                .Navigation(p => p.Kennis)
+                .AutoInclude();
+
+            modelBuilder.Entity<Models.Cv>().ToTable("Cv")
+                .Navigation(p => p.Cursussen)
+                .AutoInclude();
+
+            modelBuilder.Entity<Models.Cv>().ToTable("Cv")
+                .Navigation(p => p.Opleidingen)
+                .AutoInclude();
+
+            modelBuilder.Entity<Models.Cv>().ToTable("Cv")
+                .Navigation(p => p.Kennis)
+                .AutoInclude();
+
+            modelBuilder.Entity<Models.Cv>().ToTable("Cv")
+                .Navigation(p => p.Talen)
+                .AutoInclude();
+
+            modelBuilder.Entity<Models.Cv>().ToTable("Cv")
+                .Navigation(p => p.Werkervaring)
+                .AutoInclude();
+
             modelBuilder.Entity<Models.Ervaring>().ToTable("Werkervaring");
             modelBuilder.Entity<Models.Opleiding>().ToTable("Opleiding");
             modelBuilder.Entity<Models.Cursus>().ToTable("Cursus");
@@ -26,6 +53,5 @@ namespace OrdinaMTech.Cv.Data
             modelBuilder.Entity<Models.Taal>().ToTable("Taal");
             modelBuilder.Entity<Models.Personalia>().ToTable("Personalia");
         }
-
     }
 }

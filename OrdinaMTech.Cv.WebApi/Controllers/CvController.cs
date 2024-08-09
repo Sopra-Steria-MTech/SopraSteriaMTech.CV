@@ -1,9 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
 using OrdinaMTech.Cv.Data;
 using OrdinaMTech.Cv.Data.Enums;
 using OrdinaMTech.Cv.Data.Models;
 using OrdinaMTech.Cv.WebApi.Filters;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Processing;
 
 namespace OrdinaMTech.Cv.Api.Controllers
 {
@@ -26,7 +27,7 @@ namespace OrdinaMTech.Cv.Api.Controllers
         /// <param name="file">De nieuwe foto</param>
         [HttpPost]
         [Route("personalia/foto/upload")]
-        public IActionResult Upload([FromForm] IFormFile file)
+        public IActionResult Upload(IFormFile file)
         {
             var maxSize = 1024 * 2000;
             if (file.Length > maxSize)
@@ -63,7 +64,7 @@ namespace OrdinaMTech.Cv.Api.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            var result = _cvContext.Cvs.FirstOrDefault();
+             var result = _cvContext.Cvs.FirstOrDefault();
             return Ok(result);
         }
 

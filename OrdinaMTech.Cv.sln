@@ -18,6 +18,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrdinaMTech.Cv.Data", "Ordi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrdinaMTech.Cv.ReactJS", "OrdinaMTech.Cv.ReactJS\OrdinaMTech.Cv.ReactJS.csproj", "{4D8728A0-5260-4414-921F-D200E5401F10}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrdinaMTech.Cv.AppHost", "OrdinaMTech.Cv.AppHost\OrdinaMTech.Cv.AppHost.csproj", "{8185B930-BF11-486D-B100-807C21AF9C6F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrdinaMTech.Cv.ServiceDefaults", "OrdinaMTech.Cv.ServiceDefaults\OrdinaMTech.Cv.ServiceDefaults.csproj", "{1A427BCA-672D-4F2C-B20D-95A2023B0B64}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +48,14 @@ Global
 		{4D8728A0-5260-4414-921F-D200E5401F10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D8728A0-5260-4414-921F-D200E5401F10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D8728A0-5260-4414-921F-D200E5401F10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8185B930-BF11-486D-B100-807C21AF9C6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8185B930-BF11-486D-B100-807C21AF9C6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8185B930-BF11-486D-B100-807C21AF9C6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8185B930-BF11-486D-B100-807C21AF9C6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A427BCA-672D-4F2C-B20D-95A2023B0B64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A427BCA-672D-4F2C-B20D-95A2023B0B64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A427BCA-672D-4F2C-B20D-95A2023B0B64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A427BCA-672D-4F2C-B20D-95A2023B0B64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -11,5 +11,6 @@ namespace OrdinaMTech.Cv.Data.Models
         public string? Woonplaats { get; set; }
         public byte[]? Foto { get; set; }
         public string? Hobbies { get; set; }
+        public string? Telefoon { get; set; }
     }
 }

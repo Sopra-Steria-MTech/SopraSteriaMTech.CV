@@ -1,4 +1,3 @@
-using Microsoft.EntityFrameworkCore;
 using OrdinaMTech.Cv.Data;
 
 internal class Program
@@ -7,22 +6,20 @@ internal class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
+        builder.AddServiceDefaults();
+
         // Add services to the container.
         builder.Services.AddControllers();
-        builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
-        builder.Services.AddDbContext<CvContext>(options => options
-            .UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
-            .UseLazyLoadingProxies()
-            .LogTo(Console.WriteLine)
-            .EnableSensitiveDataLogging()
-            .EnableDetailedErrors());
-        builder.Services.AddDatabaseDeveloperPageExceptionFilter();
         builder.Services.AddCors(policyBuilder =>
             policyBuilder.AddDefaultPolicy(policy =>
                 policy.WithOrigins("*").AllowAnyHeader().AllowAnyHeader()));
 
+        builder.AddSqlServerDbContext<CvContext>("sqldb");
+
         var app = builder.Build();
+
+        //app.MapDefaultEndpoints();
 
         CreateDbIfNotExists(app);
 
@@ -32,8 +29,8 @@ internal class Program
             app.UseSwagger();
             app.UseSwaggerUI();
         }
-        app.UseHttpsRedirection();
-        app.UseAuthorization();
+        //app.UseHttpsRedirection();
+        //app.UseAuthorization();
         app.MapControllers();
         app.UseCors();
         app.Run();
