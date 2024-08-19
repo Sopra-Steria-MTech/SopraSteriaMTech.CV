@@ -32,13 +32,6 @@ jobs:
         with:
           name: .net-app
           path: "${{env.DOTNET_ROOT}}/blazor"
-      - name: App Settings Variable Substitution
-        uses: microsoft/variable-substitution@v1
-        with:
-          files: '${{env.DOTNET_ROOT}}/myapp/appsettings.json'
-        env:
-          ConnectionStrings.Default: ${{ secrets.SOME_CONNECTION_STRING }}
-          App.ServerRootAddress: ${{ env.SERVER_ROOT_ADDRESS }}
 
   deploy:
     runs-on: windows-latest
