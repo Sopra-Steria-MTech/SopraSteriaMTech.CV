@@ -1,7 +1,7 @@
 # Ordina MTech programmeertest
 
 Deze Visual Studio 2022 solution is bedoeld voor een programmeertest bij de intake van nieuwe Ordina MTech ontwikkelaars.
-De solution bestaat uit een in ASP.NET 6 WebApi voor het beheer van een CV die wordt opgeslagen in een JSON bestand en een ReactJS webclient die het CV in een leesbaar formaat toont. Er is ook een Blazor webclient toegevoegd met dezelfde functionaliteit.
+De solution bestaat uit een in ASP.NET 8 WebApi voor het beheer van een CV die wordt opgeslagen in een sql database (localdb). Deze api wordt uitgelezen door een Angular en Blazor frond-end om het CV te tonen. 
 Het is in deze webclients ook mogelijk om een nieuwe foto voor het CV te uploaden.
 
 Een werkende versie van de React applicatie staat hier: https://ordinamtechcvwebclient.azurewebsites.net/
@@ -21,6 +21,6 @@ Het verloop van de test is als volgt:
 3. Tenslotte volgt een evaluatie van 10 minuten.
 
 Bronvermelding:\
-Het gebruikte CV template komt van: https://startbootstrap.com/themes/resume/
+Het gebruikte CV template komt van: https://startbootstrap.com/theme/resume/
 \
 En de pasfoto komt van: https://thispersondoesnotexist.com/

@@ -16,7 +16,6 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.cvService.GetCv().subscribe(result =>{
       this.cv = result;
-      console.log(this.cv)
     })
   }
 }
