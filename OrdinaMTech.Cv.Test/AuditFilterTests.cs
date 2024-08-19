@@ -23,7 +23,7 @@ namespace OrdinaMTech.Cv.Test
         public void WhenUsingAuditLogWithAuthenticatedUserSetsLaatstGeraadpleegdToTheCorrectUser()
         {
             // Arrange
-            var mockedCvService = new Mock<CvService>();
+            var mockedCvService = new Mock<ICvService>();
             var modelState = new ModelStateDictionary();
             var httpContext = new DefaultHttpContext()
             {
@@ -59,7 +59,7 @@ namespace OrdinaMTech.Cv.Test
         public void WhenUsingAuditLogWithAnonymousUserSetsLaatstGeraadpleegdToAnonymous()
         {
             // Arrange
-            var mockedCvService = new Mock<CvService>();
+            var mockedCvService = new Mock<ICvService>();
             var modelState = new ModelStateDictionary();
             var httpContext = new DefaultHttpContext();
             var context = new ActionExecutingContext(
