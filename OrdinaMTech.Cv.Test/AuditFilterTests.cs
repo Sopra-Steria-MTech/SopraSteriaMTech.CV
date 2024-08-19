@@ -23,7 +23,7 @@ namespace OrdinaMTech.Cv.Test
         public void WhenUsingAuditLogWithAuthenticatedUserSetsLaatstGeraadpleegdToTheCorrectUser()
         {
             // Arrange
-            var mockedLogger = new Mock<ILogger<CvController>>();
+            var mockedCvService = new Mock<CvService>();
             var modelState = new ModelStateDictionary();
             var httpContext = new DefaultHttpContext()
             {
@@ -44,7 +44,7 @@ namespace OrdinaMTech.Cv.Test
                 ),
                 new List<IFilterMetadata>(),
                 new Dictionary<string, object>(),
-                new Mock<CvController>(mockedLogger.Object).Object);
+                new Mock<CvController>(mockedCvService.Object).Object);
 
             var sut = new AuditFilter();
 
@@ -59,7 +59,7 @@ namespace OrdinaMTech.Cv.Test
         public void WhenUsingAuditLogWithAnonymousUserSetsLaatstGeraadpleegdToAnonymous()
         {
             // Arrange
-            var mockedLogger = new Mock<ILogger<CvController>>();
+            var mockedCvService = new Mock<CvService>();
             var modelState = new ModelStateDictionary();
             var httpContext = new DefaultHttpContext();
             var context = new ActionExecutingContext(
@@ -71,7 +71,7 @@ namespace OrdinaMTech.Cv.Test
                 ),
                 new List<IFilterMetadata>(),
                 new Dictionary<string, object>(),
-                new Mock<CvController>(mockedLogger.Object).Object);
+                new Mock<CvController>(mockedCvService.Object).Object);
 
             var sut = new AuditFilter();
 

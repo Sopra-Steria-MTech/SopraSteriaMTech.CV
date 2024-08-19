@@ -5,6 +5,7 @@ using OrdinaMTech.Cv.Data;
 using OrdinaMTech.Cv.Data.Enums;
 using OrdinaMTech.Cv.Data.Models;
 using OrdinaMTech.Cv.WebApi.Filters;
+using OrdinaMTech.Cv.WebApi.Services;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Processing;
 
@@ -14,13 +15,11 @@ namespace OrdinaMTech.Cv.Api.Controllers
     [Route("[controller]")]
     public class CvController : ControllerBase
     {
-        private readonly ILogger<CvController> _logger;
-        private readonly CvContext _cvContext;
+        private readonly ICvService _cvService;
 
-        public CvController(ILogger<CvController> logger, CvContext cvContext)
+        public CvController(ICvService cvService)
         {
-            _logger = logger;
-            _cvContext = cvContext;
+            _cvService = cvService;
         }
 
         /// <summary>
@@ -46,11 +45,13 @@ namespace OrdinaMTech.Cv.Api.Controllers
                 image.Mutate(o => o.Resize(new Size(300, 300)));
                 image.SaveAsBmp(output);
 
-                var cv = _cvContext.Cvs.First();
+                var cv = _cvService.GetCv();
+                if (cv == null)
+                    return NotFound();
 
                 cv.Personalia!.Foto = output.ToArray();
 
-                Update(cv);
+                _cvService.Update(cv);
 
                 return Ok(cv.Personalia.Foto);
             }
@@ -67,7 +68,7 @@ namespace OrdinaMTech.Cv.Api.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            var result = _cvContext.Cvs.FirstOrDefault();
+            var result = _cvService.GetCv();
             if (result == null)
                 return NotFound();
 
@@ -80,17 +81,10 @@ namespace OrdinaMTech.Cv.Api.Controllers
         [HttpPut]
         public IActionResult Reset()
         {
-            var cv = _cvContext.Cvs.FirstOrDefault();
+            var cv = _cvService.GetCv();
             if (cv != null)
             {
-                var cvs = _cvContext.Cvs
-                    .Include(c => c.Kennis)
-                    .Include(c => c.Cursussen)
-                    .Include(c => c.Personalia)
-                    .Include(c => c.Talen)
-                    .Include(c => c.Werkervaring)
-                    .Include(c => c.Opleidingen);
-                _cvContext.RemoveRange(cvs);
+                _cvService.RemoveAllCvs();
             }
             cv = new Data.Models.Cv();
 
@@ -135,15 +129,10 @@ namespace OrdinaMTech.Cv.Api.Controllers
                 new Kennis() { Kennisgebied = "Azure", Jaren = 2, Kennisniveau = Kennisniveau.Gemiddeld }
             };
 
-            Update(cv);
+            _cvService.Update(cv);
 
             return Ok(cv);
         }
 
-        private void Update(Data.Models.Cv cv)
-        {
-            _cvContext.Update(cv);
-            _cvContext.SaveChanges();
-        }
     }
 }
