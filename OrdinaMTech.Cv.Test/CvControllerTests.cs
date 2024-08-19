@@ -16,6 +16,8 @@ namespace OrdinaMTech.Cv.Test
         {
             // Arrange
             var mockedCvService = new Mock<ICvService>();
+            mockedCvService.Setup(s => s.GetCv()).Returns(new Data.Models.Cv());
+
             var controller = new CvController(mockedCvService.Object);
 
             // Act

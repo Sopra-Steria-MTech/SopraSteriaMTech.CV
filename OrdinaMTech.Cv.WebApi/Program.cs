@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using OrdinaMTech.Cv.Data;
+using OrdinaMTech.Cv.WebApi.Services;
 
 internal class Program
 {
@@ -21,6 +22,8 @@ internal class Program
         builder.Services.AddCors(policyBuilder =>
             policyBuilder.AddDefaultPolicy(policy =>
                 policy.WithOrigins("*").AllowAnyHeader().AllowAnyHeader()));
+
+        builder.Services.AddScoped<ICvService, CvService>();
 
         var app = builder.Build();
 
