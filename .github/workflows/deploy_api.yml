@@ -6,7 +6,7 @@ name: Build and deploy ASP.Net Core app to Azure Web App - mtech-cv-api
 on:
   push:
     branches:
-      - master
+      - EFCore_SQL
   workflow_dispatch:
 
 jobs:
