@@ -1,3 +1,3 @@
 export const environment = {
-    url: "http://localhost:5000"
+    url: "http://mtech-cv-api.azurewebsites.net"
 };
