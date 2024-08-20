@@ -1,7 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Newtonsoft.Json;
-using OrdinaMTech.Cv.Data;
 using OrdinaMTech.Cv.Data.Enums;
 using OrdinaMTech.Cv.Data.Models;
 using OrdinaMTech.Cv.WebApi.Filters;
