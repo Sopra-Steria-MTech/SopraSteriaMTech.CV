@@ -3,7 +3,8 @@ name: Build and deploy Angular
 on:
   push:
     branches:
-      - master
+      - EFCore_SQL
+  workflow_dispatch:
 
 jobs:
   build_and_deploy_job:
