@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -17,6 +17,18 @@
   <ItemGroup>
     <ProjectReference Include="..\OrdinaMTech.Cv.BlazorApp\OrdinaMTech.Cv.BlazorApp.csproj" />
     <ProjectReference Include="..\OrdinaMTech.Cv.WebApi\OrdinaMTech.Cv.WebApi.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="data\init.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="sqlserverconfig\configure-db.sh">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="sqlserverconfig\entrypoint.sh">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
