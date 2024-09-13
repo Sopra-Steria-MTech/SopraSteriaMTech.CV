@@ -1,8 +1,10 @@
 # Sopra Steria MTech programmeertest
 
 Deze Visual Studio 2022 solution is bedoeld voor een programmeertest bij de intake van nieuwe Sopra Steria MTech ontwikkelaars.
-De solution bestaat uit een .NET 8 api voor het beheer van een CV die wordt opgeslagen in een sql database (localdb). Deze api wordt gebruikt door een Angular en Blazor frond-end om het CV te tonen. 
-Het is in deze webclients ook mogelijk om een nieuwe foto voor het CV te uploaden.
+De solution bestaat uit een .NET 8 api voor het beheer van een CV die wordt opgeslagen in een SQL database (localdb).
+Deze api wordt gebruikt door een Angular en Blazor frond-end om het CV te tonen. 
+Het is in deze front-ends ook mogelijk om een nieuwe foto voor het CV te uploaden.
+De solution wordt na wijzigingen in de main branch, middels een GitHub Actions pipeline automatisch gebouwd en gedeployed.
 
 Een werkende versie van de Agnular applicatie staat hier: https://lemon-bay-0dd512703.5.azurestaticapps.net/
 \
