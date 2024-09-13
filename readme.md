@@ -1,14 +1,14 @@
-# Ordina MTech programmeertest
+# Sopra Steria MTech programmeertest
 
-Deze Visual Studio 2022 solution is bedoeld voor een programmeertest bij de intake van nieuwe Ordina MTech ontwikkelaars.
-De solution bestaat uit een in ASP.NET 8 WebApi voor het beheer van een CV die wordt opgeslagen in een sql database (localdb). Deze api wordt uitgelezen door een Angular en Blazor frond-end om het CV te tonen. 
+Deze Visual Studio 2022 solution is bedoeld voor een programmeertest bij de intake van nieuwe Sopra Steria MTech ontwikkelaars.
+De solution bestaat uit een .NET 8 api voor het beheer van een CV die wordt opgeslagen in een sql database (localdb). Deze api wordt gebruikt door een Angular en Blazor frond-end om het CV te tonen. 
 Het is in deze webclients ook mogelijk om een nieuwe foto voor het CV te uploaden.
 
 Een werkende versie van de Agnular applicatie staat hier: https://lemon-bay-0dd512703.5.azurestaticapps.net/
 \
 De Blazor versie staat hier: https://mtech-cv-blazor.azurewebsites.net/
 \
-Hier vind je de WebApi: https://mtech-cv-api.azurewebsites.net/
+Hier vind je de api: https://mtech-cv-api.azurewebsites.net/
 
 In de solution zijn expres fouten gemaakt in het design en in de programmacode.
 
