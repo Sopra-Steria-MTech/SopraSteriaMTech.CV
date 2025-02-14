@@ -25,7 +25,7 @@ jobs:
         run: dotnet build --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish OrdinaMTech.Cv.WebApi -c Release -o "${{env.DOTNET_ROOT}}/api"
+        run: dotnet publish SopraSteriaMTech.Cv.WebApi -c Release -o "${{env.DOTNET_ROOT}}/api"
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
