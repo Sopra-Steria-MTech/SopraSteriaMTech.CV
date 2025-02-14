@@ -1,0 +1,35 @@
+﻿@page "/"
+@using SopraSteriaMTech.Cv.BlazorApp.Shared;
+@inject Data.ApiService apiService;
+@inject IJSRuntime jsRuntime;
+
+@if (cv != null)
+{
+    <NavMenu naam=@cv.Personalia.Naam />
+    <div className="container-fluid p-0">
+        <Personalia personalia=@cv.Personalia />
+        <Opleidingen opleidingen=@cv.Opleidingen.ToList() />
+        <Cursussen cursussen=@cv.Cursussen.ToList() />
+        <Werkervaring werkervaring=@cv.Werkervaring.ToList() />
+        <Kennis kennis=@cv.Kennis.ToList() />
+    </div>
+}
+else
+{
+    <span>Loading...</span>
+}
+
+@code {
+    private SopraSteriaMTech.Cv.Data.Models.Cv cv;
+
+    protected override async Task OnInitializedAsync()
+    {
+        cv = await apiService.GetCvAsync();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await jsRuntime.InvokeVoidAsync("renderjQueryComponents");
+        await base.OnAfterRenderAsync(firstRender);
+    }
+}
