@@ -3,11 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-<<<<<<<< HEAD:SopraSteriaMTech.Cv.Angular/angular.json
     "SopraSteriaMTech.Cv.Angular": {
-========
-    "OrdinaMTech.Cv.Angular": {
->>>>>>>> master:OrdinaMTech.Cv.Angular/angular.json
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -82,17 +78,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-<<<<<<<< HEAD:SopraSteriaMTech.Cv.Angular/angular.json
               "buildTarget": "SopraSteriaMTech.Cv.Angular:build:production"
             },
             "development": {
               "buildTarget": "SopraSteriaMTech.Cv.Angular:build:development"
-========
-              "buildTarget": "OrdinaMTech.Cv.Angular:build:production"
-            },
-            "development": {
-              "buildTarget": "OrdinaMTech.Cv.Angular:build:development"
->>>>>>>> master:OrdinaMTech.Cv.Angular/angular.json
             }
           },
           "defaultConfiguration": "development"
@@ -100,11 +89,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-<<<<<<<< HEAD:SopraSteriaMTech.Cv.Angular/angular.json
             "buildTarget": "SopraSteriaMTech.Cv.Angular:build"
-========
-            "buildTarget": "OrdinaMTech.Cv.Angular:build"
->>>>>>>> master:OrdinaMTech.Cv.Angular/angular.json
           }
         },
         "test": {
