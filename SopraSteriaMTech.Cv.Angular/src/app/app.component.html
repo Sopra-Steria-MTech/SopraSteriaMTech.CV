@@ -1,0 +1,9 @@
+<app-nav-menu [naam]="cv.personalia?.naam ?? null"></app-nav-menu>
+
+<div className="container-fluid p-0">
+  <app-personalia [personalia]="cv.personalia"></app-personalia>
+  <app-opleidingen [opleidingen]="cv.opleidingen"></app-opleidingen>
+  <app-cursussen [cursussen]="cv.cursussen"></app-cursussen>
+  <app-werkervaring [werkErvaring]="cv.werkervaring"></app-werkervaring>
+  <app-kennis [kennis]="cv.kennis"></app-kennis>
+</div>
