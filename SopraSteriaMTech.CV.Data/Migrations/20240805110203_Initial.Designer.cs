@@ -5,11 +5,19 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+<<<<<<< HEAD:SopraSteriaMTech.CV.Data/Migrations/20240805110203_Initial.Designer.cs
 using SopraSteriaMTech.Cv.Data;
 
 #nullable disable
 
 namespace SopraSteriaMTech.Cv.Data.Migrations
+=======
+using OrdinaMTech.Cv.Data;
+
+#nullable disable
+
+namespace OrdinaMTech.Cv.Data.Migrations
+>>>>>>> master:OrdinaMTech.CV.Data/Migrations/20240805110203_Initial.Designer.cs
 {
     [DbContext(typeof(CvContext))]
     [Migration("20240805110203_Initial")]
@@ -28,7 +36,11 @@ namespace SopraSteriaMTech.Cv.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+<<<<<<< HEAD:SopraSteriaMTech.CV.Data/Migrations/20240805110203_Initial.Designer.cs
             modelBuilder.Entity("SopraSteriaMTech.Cv.Data.Models.Cursus", b =>
+=======
+            modelBuilder.Entity("OrdinaMTech.Cv.Data.Models.Cursus", b =>
+>>>>>>> master:OrdinaMTech.CV.Data/Migrations/20240805110203_Initial.Designer.cs
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -58,7 +70,11 @@ namespace SopraSteriaMTech.Cv.Data.Migrations
                     b.ToTable("Cursus", (string)null);
                 });
 
+<<<<<<< HEAD:SopraSteriaMTech.CV.Data/Migrations/20240805110203_Initial.Designer.cs
             modelBuilder.Entity("SopraSteriaMTech.Cv.Data.Models.Cv", b =>
+=======
+            modelBuilder.Entity("OrdinaMTech.Cv.Data.Models.Cv", b =>
+>>>>>>> master:OrdinaMTech.CV.Data/Migrations/20240805110203_Initial.Designer.cs
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -76,7 +92,11 @@ namespace SopraSteriaMTech.Cv.Data.Migrations
                     b.ToTable("Cv", (string)null);
                 });
 
+<<<<<<< HEAD:SopraSteriaMTech.CV.Data/Migrations/20240805110203_Initial.Designer.cs
             modelBuilder.Entity("SopraSteriaMTech.Cv.Data.Models.Ervaring", b =>
+=======
+            modelBuilder.Entity("OrdinaMTech.Cv.Data.Models.Ervaring", b =>
+>>>>>>> master:OrdinaMTech.CV.Data/Migrations/20240805110203_Initial.Designer.cs
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -114,7 +134,11 @@ namespace SopraSteriaMTech.Cv.Data.Migrations
                     b.ToTable("Werkervaring", (string)null);
                 });
 
+<<<<<<< HEAD:SopraSteriaMTech.CV.Data/Migrations/20240805110203_Initial.Designer.cs
             modelBuilder.Entity("SopraSteriaMTech.Cv.Data.Models.Kennis", b =>
+=======
+            modelBuilder.Entity("OrdinaMTech.Cv.Data.Models.Kennis", b =>
+>>>>>>> master:OrdinaMTech.CV.Data/Migrations/20240805110203_Initial.Designer.cs
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -142,7 +166,11 @@ namespace SopraSteriaMTech.Cv.Data.Migrations
                     b.ToTable("Kennis", (string)null);
                 });
 
+<<<<<<< HEAD:SopraSteriaMTech.CV.Data/Migrations/20240805110203_Initial.Designer.cs
             modelBuilder.Entity("SopraSteriaMTech.Cv.Data.Models.Opleiding", b =>
+=======
+            modelBuilder.Entity("OrdinaMTech.Cv.Data.Models.Opleiding", b =>
+>>>>>>> master:OrdinaMTech.CV.Data/Migrations/20240805110203_Initial.Designer.cs
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -176,7 +204,11 @@ namespace SopraSteriaMTech.Cv.Data.Migrations
                     b.ToTable("Opleiding", (string)null);
                 });
 
+<<<<<<< HEAD:SopraSteriaMTech.CV.Data/Migrations/20240805110203_Initial.Designer.cs
             modelBuilder.Entity("SopraSteriaMTech.Cv.Data.Models.Personalia", b =>
+=======
+            modelBuilder.Entity("OrdinaMTech.Cv.Data.Models.Personalia", b =>
+>>>>>>> master:OrdinaMTech.CV.Data/Migrations/20240805110203_Initial.Designer.cs
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -205,7 +237,11 @@ namespace SopraSteriaMTech.Cv.Data.Migrations
                     b.ToTable("Personalia", (string)null);
                 });
 
+<<<<<<< HEAD:SopraSteriaMTech.CV.Data/Migrations/20240805110203_Initial.Designer.cs
             modelBuilder.Entity("SopraSteriaMTech.Cv.Data.Models.Taal", b =>
+=======
+            modelBuilder.Entity("OrdinaMTech.Cv.Data.Models.Taal", b =>
+>>>>>>> master:OrdinaMTech.CV.Data/Migrations/20240805110203_Initial.Designer.cs
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -233,18 +269,30 @@ namespace SopraSteriaMTech.Cv.Data.Migrations
                     b.ToTable("Taal", (string)null);
                 });
 
+<<<<<<< HEAD:SopraSteriaMTech.CV.Data/Migrations/20240805110203_Initial.Designer.cs
             modelBuilder.Entity("SopraSteriaMTech.Cv.Data.Models.Cursus", b =>
                 {
                     b.HasOne("SopraSteriaMTech.Cv.Data.Models.Cv", null)
+=======
+            modelBuilder.Entity("OrdinaMTech.Cv.Data.Models.Cursus", b =>
+                {
+                    b.HasOne("OrdinaMTech.Cv.Data.Models.Cv", null)
+>>>>>>> master:OrdinaMTech.CV.Data/Migrations/20240805110203_Initial.Designer.cs
                         .WithMany("Cursussen")
                         .HasForeignKey("CvId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
+<<<<<<< HEAD:SopraSteriaMTech.CV.Data/Migrations/20240805110203_Initial.Designer.cs
             modelBuilder.Entity("SopraSteriaMTech.Cv.Data.Models.Cv", b =>
                 {
                     b.HasOne("SopraSteriaMTech.Cv.Data.Models.Personalia", "Personalia")
+=======
+            modelBuilder.Entity("OrdinaMTech.Cv.Data.Models.Cv", b =>
+                {
+                    b.HasOne("OrdinaMTech.Cv.Data.Models.Personalia", "Personalia")
+>>>>>>> master:OrdinaMTech.CV.Data/Migrations/20240805110203_Initial.Designer.cs
                         .WithMany()
                         .HasForeignKey("PersonaliaId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -253,43 +301,71 @@ namespace SopraSteriaMTech.Cv.Data.Migrations
                     b.Navigation("Personalia");
                 });
 
+<<<<<<< HEAD:SopraSteriaMTech.CV.Data/Migrations/20240805110203_Initial.Designer.cs
             modelBuilder.Entity("SopraSteriaMTech.Cv.Data.Models.Ervaring", b =>
                 {
                     b.HasOne("SopraSteriaMTech.Cv.Data.Models.Cv", null)
+=======
+            modelBuilder.Entity("OrdinaMTech.Cv.Data.Models.Ervaring", b =>
+                {
+                    b.HasOne("OrdinaMTech.Cv.Data.Models.Cv", null)
+>>>>>>> master:OrdinaMTech.CV.Data/Migrations/20240805110203_Initial.Designer.cs
                         .WithMany("Werkervaring")
                         .HasForeignKey("CvId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
+<<<<<<< HEAD:SopraSteriaMTech.CV.Data/Migrations/20240805110203_Initial.Designer.cs
             modelBuilder.Entity("SopraSteriaMTech.Cv.Data.Models.Kennis", b =>
                 {
                     b.HasOne("SopraSteriaMTech.Cv.Data.Models.Cv", null)
+=======
+            modelBuilder.Entity("OrdinaMTech.Cv.Data.Models.Kennis", b =>
+                {
+                    b.HasOne("OrdinaMTech.Cv.Data.Models.Cv", null)
+>>>>>>> master:OrdinaMTech.CV.Data/Migrations/20240805110203_Initial.Designer.cs
                         .WithMany("Kennis")
                         .HasForeignKey("CvId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
+<<<<<<< HEAD:SopraSteriaMTech.CV.Data/Migrations/20240805110203_Initial.Designer.cs
             modelBuilder.Entity("SopraSteriaMTech.Cv.Data.Models.Opleiding", b =>
                 {
                     b.HasOne("SopraSteriaMTech.Cv.Data.Models.Cv", null)
+=======
+            modelBuilder.Entity("OrdinaMTech.Cv.Data.Models.Opleiding", b =>
+                {
+                    b.HasOne("OrdinaMTech.Cv.Data.Models.Cv", null)
+>>>>>>> master:OrdinaMTech.CV.Data/Migrations/20240805110203_Initial.Designer.cs
                         .WithMany("Opleidingen")
                         .HasForeignKey("CvId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
+<<<<<<< HEAD:SopraSteriaMTech.CV.Data/Migrations/20240805110203_Initial.Designer.cs
             modelBuilder.Entity("SopraSteriaMTech.Cv.Data.Models.Taal", b =>
                 {
                     b.HasOne("SopraSteriaMTech.Cv.Data.Models.Cv", null)
+=======
+            modelBuilder.Entity("OrdinaMTech.Cv.Data.Models.Taal", b =>
+                {
+                    b.HasOne("OrdinaMTech.Cv.Data.Models.Cv", null)
+>>>>>>> master:OrdinaMTech.CV.Data/Migrations/20240805110203_Initial.Designer.cs
                         .WithMany("Talen")
                         .HasForeignKey("CvId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
+<<<<<<< HEAD:SopraSteriaMTech.CV.Data/Migrations/20240805110203_Initial.Designer.cs
             modelBuilder.Entity("SopraSteriaMTech.Cv.Data.Models.Cv", b =>
+=======
+            modelBuilder.Entity("OrdinaMTech.Cv.Data.Models.Cv", b =>
+>>>>>>> master:OrdinaMTech.CV.Data/Migrations/20240805110203_Initial.Designer.cs
                 {
                     b.Navigation("Cursussen");
 

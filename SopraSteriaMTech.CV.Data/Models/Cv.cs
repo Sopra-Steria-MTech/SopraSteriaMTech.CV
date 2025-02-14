@@ -1,6 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
+<<<<<<< HEAD:SopraSteriaMTech.CV.Data/Models/Cv.cs
 namespace SopraSteriaMTech.Cv.Data.Models
+=======
+namespace OrdinaMTech.Cv.Data.Models
+>>>>>>> master:OrdinaMTech.CV.Data/Models/Cv.cs
 {
     public class Cv
     {
