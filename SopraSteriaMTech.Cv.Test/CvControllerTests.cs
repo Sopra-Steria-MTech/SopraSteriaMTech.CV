@@ -1,13 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-<<<<<<< HEAD:SopraSteriaMTech.Cv.Test/CvControllerTests.cs
 using SopraSteriaMTech.Cv.Api.Controllers;
 using SopraSteriaMTech.Cv.WebApi.Services;
-=======
-using OrdinaMTech.Cv.Api.Controllers;
-using OrdinaMTech.Cv.WebApi.Services;
->>>>>>> master:OrdinaMTech.Cv.Test/CvControllerTests.cs
 using System.Net;
 
 namespace SopraSteriaMTech.Cv.Test

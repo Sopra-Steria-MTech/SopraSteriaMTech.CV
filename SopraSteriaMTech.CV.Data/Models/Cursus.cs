@@ -1,10 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-<<<<<<< HEAD:SopraSteriaMTech.CV.Data/Models/Cursus.cs
 namespace SopraSteriaMTech.Cv.Data.Models
-=======
-namespace OrdinaMTech.Cv.Data.Models
->>>>>>> master:OrdinaMTech.CV.Data/Models/Cursus.cs
 {
     public class Cursus
     {

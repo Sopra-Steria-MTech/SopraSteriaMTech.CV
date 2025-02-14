@@ -1,13 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-<<<<<<< HEAD:SopraSteriaMTech.CV.Data/CvContext.cs
 using SopraSteriaMTech.Cv.Data.Models;
 
 namespace SopraSteriaMTech.Cv.Data
-=======
-using OrdinaMTech.Cv.Data.Models;
-
-namespace OrdinaMTech.Cv.Data
->>>>>>> master:OrdinaMTech.CV.Data/CvContext.cs
 {
     public class CvContext : DbContext
     {

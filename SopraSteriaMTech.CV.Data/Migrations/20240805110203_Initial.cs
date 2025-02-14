@@ -2,11 +2,7 @@
 
 #nullable disable
 
-<<<<<<< HEAD:SopraSteriaMTech.CV.Data/Migrations/20240805110203_Initial.cs
 namespace SopraSteriaMTech.Cv.Data.Migrations
-=======
-namespace OrdinaMTech.Cv.Data.Migrations
->>>>>>> master:OrdinaMTech.CV.Data/Migrations/20240805110203_Initial.cs
 {
     /// <inheritdoc />
     public partial class Initial : Migration
