@@ -1,0 +1,17 @@
+<section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="skills">
+    <div class="w-100">
+        <h2 class="mb-5">Kennis</h2>
+        <div *ngFor="let kennisItem of kennis"
+            class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="resume-content">
+                <h3 class="mb-0">{{kennisItem.kennisgebied}}</h3>
+                <span class="fa fa-star {{kennisItem.kennisniveau >= 1 ? ' checked' : ''}}"></span>
+                <span class="fa fa-star {{kennisItem.kennisniveau >= 2 ? ' checked' : ''}}"></span>
+                <span class="fa fa-star {{kennisItem.kennisniveau >= 3 ? ' checked' : ''}}"></span>
+                <span class="fa fa-star {{kennisItem.kennisniveau >= 4 ? ' checked' : ''}}"></span>
+                <span class="fa fa-star {{kennisItem.kennisniveau >= 5 ? ' checked' : ''}}"></span>
+            </div>
+        </div>
+
+    </div>
+</section>

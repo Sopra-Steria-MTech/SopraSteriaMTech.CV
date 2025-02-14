@@ -1,14 +1,16 @@
-# Ordina MTech programmeertest
+# Sopra Steria MTech programmeertest
 
-Deze Visual Studio 2022 solution is bedoeld voor een programmeertest bij de intake van nieuwe Ordina MTech ontwikkelaars.
-De solution bestaat uit een in ASP.NET 6 WebApi voor het beheer van een CV die wordt opgeslagen in een JSON bestand en een ReactJS webclient die het CV in een leesbaar formaat toont. Er is ook een Blazor webclient toegevoegd met dezelfde functionaliteit.
-Het is in deze webclients ook mogelijk om een nieuwe foto voor het CV te uploaden.
+Deze Visual Studio 2022 solution is bedoeld voor een programmeertest bij de intake van nieuwe Sopra Steria MTech ontwikkelaars.
+De solution bestaat uit een .NET 8 api voor het beheer van een CV die wordt opgeslagen in een SQL database (localdb).
+Deze api wordt gebruikt door een Angular en Blazor frond-end om het CV te tonen. 
+Het is in deze front-ends ook mogelijk om een nieuwe foto voor het CV te uploaden.
+De solution wordt na wijzigingen in de main branch, middels een GitHub Actions pipeline automatisch gebouwd en gedeployed.
 
-Een werkende versie van de React applicatie staat hier: https://ordinamtechcvwebclient.azurewebsites.net/
+Een werkende versie van de Agnular applicatie staat hier: https://lemon-bay-0dd512703.5.azurestaticapps.net/
 \
-De Blazor versie staat hier: https://ordinamtechcvblazorapp.azurewebsites.net/ 
+De Blazor versie staat hier: https://mtech-cv-blazor.azurewebsites.net/
 \
-Hier vind je de WebApi: https://ordinamtechcvwebapi.azurewebsites.net/
+Hier vind je de api: https://mtech-cv-api.azurewebsites.net/
 
 In de solution zijn expres fouten gemaakt in het design en in de programmacode.
 
@@ -21,6 +23,6 @@ Het verloop van de test is als volgt:
 3. Tenslotte volgt een evaluatie van 10 minuten.
 
 Bronvermelding:\
-Het gebruikte CV template komt van: https://startbootstrap.com/themes/resume/
+Het gebruikte CV template komt van: https://startbootstrap.com/theme/resume/
 \
 En de pasfoto komt van: https://thispersondoesnotexist.com/

@@ -1,5 +1,6 @@
 ﻿using OrdinaMTech.Cv.Data.Enums;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OrdinaMTech.Cv.Data.Models
 {
@@ -10,5 +11,8 @@ namespace OrdinaMTech.Cv.Data.Models
         public string? Kennisgebied { get; set; }
         public Kennisniveau Kennisniveau { get; set; }
         public int Jaren { get; set; }
+
+        [ForeignKey("Cv")]
+        public int CvId { get; set; }
     }
 }

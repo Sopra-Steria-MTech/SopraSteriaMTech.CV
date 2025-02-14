@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc.Abstractions;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Routing;
-using Microsoft.Extensions.Logging;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using OrdinaMTech.Cv.Api.Controllers;
@@ -23,7 +22,7 @@ namespace OrdinaMTech.Cv.Test
         public void WhenUsingAuditLogWithAuthenticatedUserSetsLaatstGeraadpleegdToTheCorrectUser()
         {
             // Arrange
-            var mockedLogger = new Mock<ILogger<CvController>>();
+            var mockedCvService = new Mock<ICvService>();
             var modelState = new ModelStateDictionary();
             var httpContext = new DefaultHttpContext()
             {
@@ -44,7 +43,7 @@ namespace OrdinaMTech.Cv.Test
                 ),
                 new List<IFilterMetadata>(),
                 new Dictionary<string, object>(),
-                new Mock<CvController>(mockedLogger.Object).Object);
+                new Mock<CvController>(mockedCvService.Object).Object);
 
             var sut = new AuditFilter();
 
@@ -59,7 +58,7 @@ namespace OrdinaMTech.Cv.Test
         public void WhenUsingAuditLogWithAnonymousUserSetsLaatstGeraadpleegdToAnonymous()
         {
             // Arrange
-            var mockedLogger = new Mock<ILogger<CvController>>();
+            var mockedCvService = new Mock<ICvService>();
             var modelState = new ModelStateDictionary();
             var httpContext = new DefaultHttpContext();
             var context = new ActionExecutingContext(
@@ -71,7 +70,7 @@ namespace OrdinaMTech.Cv.Test
                 ),
                 new List<IFilterMetadata>(),
                 new Dictionary<string, object>(),
-                new Mock<CvController>(mockedLogger.Object).Object);
+                new Mock<CvController>(mockedCvService.Object).Object);
 
             var sut = new AuditFilter();
 
