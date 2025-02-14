@@ -1,5 +1,13 @@
-﻿.checked {
-    color: orange;
+.bg-primary {
+  background: linear-gradient(45deg, rgba(209,10,10,1) 0%, rgba(9,9,121,1) 100%) !important
+}
+
+.text-primary {
+  color: darkblue !important
+}
+
+.checked {
+  color: mediumblue;
 }
 
 .profile-pic {
